@@ -9,7 +9,6 @@ JS UPDATES:
 - Dodati nove heroje i klizajuci meni
 - Dodati nagrade i otkljucavanje karaktera
 - Dodati end fight text.
-- Popraviti CSS da bude responsive
 
 CSS UPDATES:
 
