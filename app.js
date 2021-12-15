@@ -29,6 +29,11 @@ dracoTheme.volume = 0.2;
 // FIre SXF
 fireSFX = new Audio("Music/fireLOW.mp3")
 fireSFX.volume = 0.3;
+// victory and gameover
+victory = new Audio("Music/victory.mp3")
+victory.volume = 0.3
+gameover = new Audio("Music/gameover.mp3")
+gameover.volume = 0.3
 
 // Declaring range inputs for every Setting so i can
 // get Lower / Higher volume seperatally.
@@ -105,13 +110,19 @@ function healthDisplay() {
         bar.style.borderColor = "red";
         clearInterval(intervalX2);
         clearInterval(intervalX);
-        dragonRoar.pause();
-        dragonRoar.currentTime = 0;
         b1.disabled = true;
         b2.disabled = true;
+        gameover.play();
+        endMsg.classList.add("lostMSG")
+        endingMsg("YOU LOST");
+        setTimeout(function () {
+            endMsg.classList.add("shrinking");
+            endMsg.classList.remove("expanding");
+            endMsg.classList.remove("lostMSG")
+        }, 7000)
         setTimeout(function () {
             mainMenuReturn();
-        }, 4000)
+        }, 7900)
     } else if (healthCD === maxHealth) {
         health1.style.color = "lime";
     }
@@ -134,9 +145,19 @@ function healthDisplay2() {
         bar2.style.borderColor = "red";
         clearInterval(intervalX);
         clearInterval(intervalX2);
+        dragonRoar.pause();
+        dragonRoar.currentTime = 0;
+        victory.play();
+        endMsg.classList.add("wonMSG")
+        endingMsg("YOU WON");
+        setTimeout(function () {
+            endMsg.classList.add("shrinking");
+            endMsg.classList.remove("expanding");
+            endMsg.classList.remove("wonMSG")
+        }, 7000)
         setTimeout(function () {
             mainMenuReturn();
-        }, 4000)
+        }, 7900)
     } else if (healthCD2 === maxHealth2) {
         health4.style.color = "lime";
     }
@@ -634,3 +655,11 @@ secretCode.addEventListener("input", function () {
         fight(delay, ultraHit, critHit, strongHit, normalHit);
     }
 })
+
+//ENDING Message 
+
+let endMsg = document.querySelector(".endMsg");
+function endingMsg(text) {
+    endMsg.innerHTML = text;
+    endMsg.classList.add("expanding");
+}

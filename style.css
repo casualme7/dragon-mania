@@ -414,11 +414,11 @@ button:active {
 
 .dragonDMGnum {
     position: absolute;
-    top: 200%;
+    top: 230%;
     left: 80%;
     font-size: 30px;
     transform: rotate(20deg);
-    width: 25%;
+    width: 100px;
 }
 
 .dragonULTRAnum {
@@ -482,6 +482,22 @@ button:active {
     transition: 1000ms;
 }
 
+.endMsg {
+    font-size: 500%;
+    width: 100%;
+    text-align: center;
+}
+
+.wonMSG {
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    color: lime;
+}
+
+.lostMSG {
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    color: red;
+}
+
 /* ------------- */
 .row {
     width: 100%;
@@ -521,7 +537,7 @@ button:active {
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 790px) {
     .characterSelect {
         border-bottom-right-radius: 30px;
         border-bottom-left-radius: 30px;
