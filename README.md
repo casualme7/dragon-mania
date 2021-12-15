@@ -1,3 +1,5 @@
+JS UPDATES:
+
 - Kada zmaj umre iskljuciti njegov voice.
 - Dodati hit numbere
 - Kada se zavrsi fajt da vrati u char screen
@@ -8,3 +10,7 @@
 - Dodati nagrade i otkljucavanje karaktera
 - Dodati end fight text.
 - Popraviti CSS da bude responsive
+
+CSS UPDATES:
+
+- Responsive, Boki rekao da hoce.
