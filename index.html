@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/icon.ico" />
+    <title>DRAGON Fight Mania</title>
+
+    <!-- DISCAIMER!!!
+
+    HTML IS BASIC SO FAR
+    CSS IS BASIC AS WELL
+    JS IS MORE ADVANCED AND EVERY INFO IS ALREADY WRITTEN
+    IN THE APP.JS FILE -->
+
+</head>
+
+<body>
+    <video class="draco" autoplay muted loop>
+        <source src="Videos/dragon.mp4" type="video/mp4">
+    </video>
+    <div class="firstDiv centered">
+        <p style="color: white;">Are you sure you want to enter the coolest site ever?</p>
+        <button class="firstYes">YES</button>
+        <button class="firstNo">NO</button>
+    </div>
+    <img class="settings shrinking" src="Images/settings.png" alt="">
+    <div class="settingsDiv shrinking centered">
+        <h2 class="settingsH2">SETTINGS</h2>
+        <label for="menuMusic">Menu Music:</label> <br>
+        <input type="range" value="1" min="0" max="10" name="" id="menuMusic"> <br>
+        <label for="fightingMusic">Fighting Music:</label> <br>
+        <input type="range" value="2" min="0" max="10" name="" id="fightingMusic"> <br>
+        <label for="dragonVoice">Dragon Voice:</label> <br>
+        <input type="range" value="2" min="0" max="10" name="" id="dragonVoice"> <br>
+        <label for="ambientVolume">Ambient Volume:</label> <br>
+        <input type="range" value="3" min="0" max="10" name="" id="ambientVolume"> <br>
+        <label for="secretCode">Secret code:</label>
+        <input type="text" name="" id="secretCode"> <br>
+        <button class="exitButton">EXIT</button>
+    </div>
+    <div class="characterSelect shrinking centered ">
+        <div class="row headerText">
+            <div class="col-12">
+                <h2 class="chooseText">CHOOSE YOUR CHARACTER</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <p class="charName" style="color: rgb(15, 15, 192); text-shadow: 2px 2px 0 #032080, 3px 3px 0 #040261;">
+                    RAIDEN</p>
+                <img src="Images/raiden.jpg" alt="">
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText">HP</div>
+                        <div class="barFill bar1P1"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">DMG</div>
+                        <div class="barFill bar2P1"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">SPEED</div>
+                        <div class="barFill bar3P1"></div>
+                    </div>
+                </div>
+                <button class="selectButton selectP1">Select</button>
+            </div>
+            <div class="col-3">
+                <p class="charName" style="color: rgb(92, 182, 2);text-shadow: 2px 2px 0 #06853b, 3px 3px 0 #058057;">
+                    REPTILE</p>
+                <img src="Images/reptile.jpg" alt="">
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText">HP</div>
+                        <div class="barFill bar1P2"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">DMG</div>
+                        <div class="barFill bar2P2"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">SPEED</div>
+                        <div class="barFill bar3P2"></div>
+                    </div>
+                </div>
+                <button class="selectButton selectP2">Select</button>
+            </div>
+            <div class="col-3">
+                <p class="charName" style="color: rgb(199, 196, 0);text-shadow: 2px 2px 0 #cfc201, 3px 3px 0 #cea908;">
+                    CYRAX</p>
+                <img src="Images/cyrax.jpg" alt="">
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText">HP</div>
+                        <div class="barFill bar1P3"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">DMG</div>
+                        <div class="barFill bar2P3"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">SPEED</div>
+                        <div class="barFill bar3P3"></div>
+                    </div>
+                </div>
+                <button class="selectButton selectP3">Select</button>
+            </div>
+            <div class="col-3">
+                <p class="charName"
+                    style="color: rgb(100, 100, 100);text-shadow: 2px 2px 0 #5c5c5c, 3px 3px 0 #363636;">SMOKE</p>
+                <img src="Images/smoke.jpg" alt="">
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText">HP</div>
+                        <div class="barFill bar1P4"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">DMG</div>
+                        <div class="barFill bar2P4"></div>
+                    </div>
+                </div>
+                <div class="attributes">
+                    <div class="attributeP">
+                        <div class="attributeText attribute2P1">SPEED</div>
+                        <div class="barFill bar3P4"></div>
+                    </div>
+                </div>
+                <button class="selectButton selectP4">Select</button>
+                <button class="fightButton">FIGHT</button>
+                <div class="cover1">Opponent:<span style="color: red;">DRACO</span></div>
+                <div class="cover2">Selected:</div>
+            </div>
+        </div>
+    </div>
+    <main class="dragonBar shrinking">
+        <div class="bar2">
+            <div class="health3"></div>
+            <div class="healthNum2"><span id="health4">x</span>/<span id="health5">x</span></div>
+            <p class="dragonName" style="color: red;">DRACO</p>
+        </div>
+    </main>
+    <main class="playerFightBar shrinking">
+        <main>
+            <div class="bar">
+                <div class="health"></div>
+                <div class="healthNum"><span id="health1">x</span>/<span id="health2">x</span></div>
+            </div>
+        </main>
+        <section class="controllButtons">
+            <section class="buttons">
+                <button class="b1">ULTRA</button>
+                <button class="b2">HEAL</button>
+            </section>
+            <section class="fightImg">
+                <img class="fightAvatar" src="Images/q.jpg" alt="">
+            </section>
+            <!-- <section class="fight">
+                <button class="b3">FIGHT</button>
+            </section>
+            <section class="reset">
+                <button class="b4">RESET</button>
+            </section> -->
+        </section>
+    </main>
+
+    <!-- DISCAIMER!!!
+
+    HTML IS BASIC SO FAR
+    CSS IS BASIC AS WELL
+    JS IS MORE ADVANCED AND EVERY INFO IS ALREADY WRITTEN
+    IN THE APP.JS FILE -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>

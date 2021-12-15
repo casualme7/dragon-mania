@@ -1,0 +1,523 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    /* outline: 1px solid black; */
+}
+
+video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+body {
+    background: url(Images/background1.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: cadetblue;
+    height: 100vh;
+    position: relative;
+}
+
+.firstDiv {
+    /* display: none; */
+    margin: 0 auto;
+    width: 20%;
+    text-align: center;
+    min-width: 200px;
+}
+
+.characterSelect {
+    text-align: center;
+    width: 70%;
+    border: 4px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.404);
+    border-radius: 120px;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.settings {
+    position: absolute;
+    top: 4%;
+    right: 0%;
+    width: 4%;
+    max-width: 50px;
+    min-width: 30px ;
+    cursor: pointer;
+    border: 3px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+.settingsH2 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.settingsDiv {
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input {
+    margin-top: 10px;
+}
+
+#secretCode {
+    width: 30%;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.cover1,.cover2 {
+    font-size: 15px;
+    display: flex;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.cover1 {
+    top: -5%;
+    left: 75%;
+    width: 25%;
+    z-index: 2;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: cadetblue;
+}
+
+.cover2 {
+    top: -5%;
+    right: 75%;
+    width: 25%;
+    z-index: 2;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: cadetblue;
+}
+
+.headerText {
+    margin-bottom: 30px;
+}
+
+.headerText h2 {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 0 #f70000, 4px 4px 0 #fffb00;
+    /* font-family: 'Comic Neue', cursive; */
+}
+
+.charName {
+    margin-bottom: 10px;
+    font-size: 23px;
+    text-shadow: 5px 6px 31px 21px #000000;
+}
+
+.attributeP {
+    background-color: rgba(255, 255, 255, 0.726);
+    position: relative;
+    border: 4px solid black;
+    width: 65%;
+    height: 25px;
+    margin: 0 auto;
+    border-radius: 50px;
+    position: relative;
+}
+
+.fightImg {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.attributes {
+    margin: 6px;
+}
+
+.barFill {
+    border-radius: 50px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.attributeText {
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%);
+}
+
+.bar1P1 {
+    background-color: lime;
+    width: 50%;
+}
+
+.bar1P2 {
+    background-color: lime;
+    width: 85%;
+}
+
+.bar1P3 {
+    background-color: lime;
+    width: 100%;
+}
+
+.bar1P4 {
+    background-color: lime;
+    width: 30%;
+}
+
+.bar2P1 {
+    width: 60%;
+    background-color: red;
+}
+
+.bar2P2{
+    width: 30%;
+    background-color: red;
+}
+
+.bar2P3{
+    width: 100%;
+    background-color: red;
+}
+
+.bar2P4{
+    width: 85%;
+    background-color: red;
+}
+
+.bar3P1 {
+    width: 66%;
+    background-color: purple;
+}
+
+.bar3P2 {
+    width: 35%;
+    background-color: purple;
+}
+
+.bar3P3 {
+    width: 5%;
+    background-color: purple;
+}
+
+.bar3P4 {
+    width: 100%;
+    background-color: purple;
+}
+
+img {
+    border: 5px solid white;
+    border-radius: 20%;
+    width: 50%;
+}
+
+.firstYes, .firstNo {
+    width: 20%;
+    margin: 10px 5px;
+}
+
+.playerFightBar {
+    width: 15%;
+    min-width: 200px;
+    position: absolute;
+    top: 88%;
+    left: 50%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.controllButtons {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.bar {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    min-width: 200px;
+    height: 30px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.healthNum {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.health {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+    transition: 300ms;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 5px;
+    margin-top: 10px;
+    width: 40%;
+    border: 3px solid black;
+    border-radius: 20px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.selectButton {
+    width: 20%;
+    margin-bottom: 3px;
+    min-width: 55px;
+}
+
+.fightButton {
+    font-size: 100%;
+    position: absolute;
+    width: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    bottom: -14%;
+    padding: 15px 5px;
+    min-width: 55px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(56, 13, 13);
+    border-color: red;
+}
+
+.fightButton:hover {
+    transform: translate(-50%,-50%) scale(1.3);
+}
+
+.firstNo,.exitButton {
+    color: red;
+    background-color: rgb(85, 22, 22);
+    border-color: red;
+}
+
+.b1 {
+    color: rgb(181, 7, 197);
+    background-color: rgb(78, 20, 78);
+    border-color: rgb(165, 8, 170);
+}
+
+.exitButton {
+    width: 30%;
+} 
+
+.b2,.firstYes,.selectButton {
+    color: lime;
+    background-color: rgb(28, 99, 11);
+    border-color: lime;
+}
+
+button:active {
+    background-color: rgb(0, 0, 0);
+    color: rgb(168, 168, 168);
+}
+
+.b3 {
+    color: rgb(247, 252, 0);
+    background-color: rgb(236, 134, 0);
+    border-color: rgb(247, 252, 0);
+}
+
+.b4 {
+    color: cyan;
+    background-color: rgb(4, 34, 167);
+    border-color: cyan;
+}
+
+.dragonName {
+    font-size: 20px;
+}
+
+#health1 {
+    color: lime;
+}
+
+.fight, .reset {
+    display: flex;
+    justify-content: center;
+}
+
+.dragonBar {
+    position: absolute;
+    top: 25px;
+    width: 50%;
+    min-width: 350px;
+    left: 50%;
+    margin: 0 auto;
+    transform: translateX(-50%);
+}
+
+.bar2 {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.dragonName {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.health3 {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+    transition: 300ms;
+}
+
+.healthNum2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#health4 {
+    color: lime;
+}
+
+.shrinking {
+    transform: translate(-50%,-50%) scale(0);
+    transition: 1000ms;
+}
+
+.expanding {
+    transform: translate(-50%,-50%) scale(1);
+    transition: 1000ms;
+}
+
+/* ------------- */
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+@media only screen and (max-width: 500px) {
+    * {
+        font-size: 10px;
+    }
+    .settings {
+        top: 8%;
+    }
+    .dragonBar {
+        width: 80%;
+        min-width: none;
+    }
+    .headerText h2{
+        font-size: 15px;
+    }
+    .fightButton {
+        font-size: 100%;
+    }
+    .charName {
+        font-size: 100%;
+    }
+    .characterSelect {
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    .fightButton {
+    bottom: -17%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .characterSelect {
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+}
+
+@media only screen and (min-width: 301px) {
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
+/* ------------------- */
