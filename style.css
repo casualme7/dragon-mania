@@ -394,6 +394,41 @@ button:active {
     transform: translateX(-50%);
 }
 
+.playerHEALnum {
+    position: absolute;
+    top: -15%;
+    left: 20%;
+    font-size: 20px;
+    transform: rotate(-20deg);
+    width: 40%;
+}
+
+.playerDMGnum {
+    position: absolute;
+    top: -20%;
+    left: 80%;
+    font-size: 20px;
+    transform: rotate(-20deg);
+    width: 40%;
+}
+
+.dragonDMGnum {
+    position: absolute;
+    top: 200%;
+    left: 80%;
+    font-size: 30px;
+    transform: rotate(20deg);
+    width: 25%;
+}
+
+.dragonULTRAnum {
+    position: absolute;
+    top: 200%;
+    left: 20%;
+    font-size: 30px;
+    transform: rotate(-20deg);
+}
+
 .bar2 {
     position: relative;
     width: 100%;
@@ -434,6 +469,16 @@ button:active {
 
 .expanding {
     transform: translate(-50%,-50%) scale(1);
+    transition: 1000ms;
+}
+
+.expandingPlayer {
+    transform: translate(-50%,-50%) scale(1) rotate(-20deg);
+    transition: 1000ms;
+}
+
+.expandingDragon {
+    transform: translate(-50%,-50%) scale(1) rotate(20deg);
     transition: 1000ms;
 }
 
