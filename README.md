@@ -1,14 +1,14 @@
 JS UPDATES:
 
-- Kada zmaj umre iskljuciti njegov voice.
-- Dodati hit numbere
-- Kada se zavrsi fajt da vrati u char screen
+- Kada zmaj umre iskljuciti njegov voice. (URADJENO)
+- Dodati hit numbere (URADJENO)
+- Kada se zavrsi fajt da vrati u char screen (URADJENO)
 - Dodati jos bosseva
 - Popraviti draco fight muziku
 - Dodti poene
 - Dodati nove heroje i klizajuci meni
 - Dodati nagrade i otkljucavanje karaktera
-- Dodati end fight text.
+- Dodati end fight text. (URADJENO)
 
 CSS UPDATES:
 
