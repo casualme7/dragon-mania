@@ -246,8 +246,9 @@ img {
     width: 15%;
     min-width: 200px;
     position: absolute;
-    top: 88%;
+    top: 86%;
     left: 50%;
+    transform: translate(-10px,-10px);
 }
 
 .centered {

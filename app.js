@@ -14,7 +14,9 @@ let bar = document.querySelector(".bar");
 // MUSIC AND SETTINGS
 
 lobbyMusic = new Audio("Music/lobbyLOW.mp3")
+lobby2Music = new Audio("Music/lobby2LOW.mp3")
 lobbyMusic.volume = 0.1;
+lobby2Music.volume = 0.1;
 dragonRoar = new Audio("Music/dragonLOW.mp3")
 dragonRoar.volume = 0.2;
 dracoTheme = new Audio("Music/dracoLOW.mp3")
@@ -150,15 +152,19 @@ function fight(delay, ultraHit, critHit, strongHit, normalHit) {
         if (RNG > ultraHit && RNG <= critHit) {
             healthCD2 -= 3
             console.log("Player Hit for: ", 3);
+            tiltBoss();
         } else if (RNG > 0 && RNG <= ultraHit) {
             healthCD2 -= 20;
             console.log("Player Hit for: ", 20);
+            tiltBoss();
         } else if (RNG > critHit && RNG <= strongHit) {
             healthCD2 -= 2
             console.log("Player Hit for: ", 2);
+            tiltBoss();
         } else if (RNG > strongHit && RNG <= normalHit) {
             healthCD2 -= 1
             console.log("Player Hit for: ", 1);
+            tiltBoss();
         } else {
             console.log("Player MISS")
         }
@@ -175,15 +181,19 @@ function fight2(delay2, ultraHit2, critHit2, strongHit2, normalHit2) {
         if (RNG2 > ultraHit2 && RNG2 <= critHit2) {
             healthCD -= 3
             console.log("BOSS Hit for: ", 3);
+            tiltPlayer();
         } else if (RNG2 > 0 && RNG2 <= ultraHit2) {
             healthCD -= 20;
             console.log("BOSS Hit for: ", 20);
+            tiltPlayer();
         } else if (RNG2 > critHit2 && RNG2 <= strongHit2) {
             healthCD -= 2
             console.log("BOSS Hit for: ", 2);
+            tiltPlayer();
         } else if (RNG2 > strongHit2 && RNG2 <= normalHit2) {
             healthCD -= 1
             console.log("BOSS Hit for: ", 1);
+            tiltPlayer();
         } else {
             console.log("BOSS MISS")
         }
@@ -230,6 +240,7 @@ function reset() {
 function hitChances() {
     console.clear(); // Clears console to prevent console spam
     console.log(`HP  =`, maxHealth)
+    console.log(`Speed  =`, delay, "ms")
     console.log(`ULTRA HIT(20HP) = `, (100 * (ultraHit)) / 1000, ` % `)
     console.log(`Critical Hit(3HP) = `, (100 * (critHit - ultraHit)) / 1000, ` % `)
     console.log(`Strong Hit(2HP) = `, (100 * (strongHit - critHit)) / 1000, ` % `)
@@ -348,7 +359,7 @@ selectP3.addEventListener("click", function () {
 // Playe 4 (SMOKE) personal variables.
 selectP4.addEventListener("click", function () {
     maxHealth = 30;
-    healthCD = 35;
+    healthCD = 30;
     ultraHit = 270;
     critHit = 490; // default 120; secondary 110;                    
     strongHit = 720; // default 330; secondary 310;                  
@@ -360,6 +371,24 @@ selectP4.addEventListener("click", function () {
     cover2.innerHTML = `Selected: <span style="color: rgb(100, 100, 100);">SMOKE</span>`
     fightAvatar.src = "Images/smoke.jpg";
 })
+
+function tiltPlayer() {
+    let tiltLD = Math.floor(Math.random() * - 50) - 25;
+    let tiltGD = Math.floor(Math.random() * - 30) - 50;
+    playerFightBar.style.transform = `translate(${tiltLD}%,${tiltGD}%)`;
+    setTimeout(function () {
+        playerFightBar.style.transform = `translate(-50%,-50%)`;
+    }, 200)
+}
+
+function tiltBoss() {
+    let tiltLD2 = Math.floor(Math.random() * - 10) - 45;
+    let tiltGD2 = Math.floor(Math.random() * - 20) - 10;
+    dragonBar.style.transform = `translate(${tiltLD2}%,${tiltGD2}%)`;
+    setTimeout(function () {
+        dragonBar.style.transform = `translate(-50%,-50%)`;
+    }, 200)
+}
 
 // Fullscreen: ON 
 function openFullscreen() {
@@ -406,7 +435,7 @@ firstYes.addEventListener("click", function () {
     document.body.style.background = "none";
     document.body.style.backgroundColor = "cadetblue";
     openFullscreen();
-    lobbyMusic.play();
+    lobby2Music.play();
     firstDiv.classList.add("shrinking");
     setTimeout(function () {
         characterSelect.classList.add("expanding")
@@ -425,8 +454,8 @@ fightButton.disabled = true;
 
 // FIGHT Button in Character Select.
 fightButton.addEventListener("click", function () {
-    lobbyMusic.pause();
-    lobbyMusic.currentTime = 0;
+    lobby2Music.pause();
+    lobby2Music.currentTime = 0;
     characterSelect.classList.remove("expanding");
     characterSelect.classList.add("shrinking");
     setTimeout(function () {
@@ -471,4 +500,20 @@ exitButton.addEventListener("click", function () {
 
 settings.addEventListener("click", function () {
     settingsDiv.classList.add("expanding");
+})
+
+let secretCode = document.querySelector("#secretCode")
+
+secretCode.addEventListener("input", function () {
+    if (secretCode.value == "superman") {
+        console.log("CHEAT ACTICVATED")
+        clearInterval(intervalX);
+        ultraHit = 991;
+        critHit = 993;
+        strongHit = 996;
+        normalHit = 997;
+        delay = 200;
+        barTransition = 300;
+        fight(delay, ultraHit, critHit, strongHit, normalHit);
+    }
 })
