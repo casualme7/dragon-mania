@@ -1,3 +1,5 @@
+Hosted on Netlify: https://dragon-mania.netlify.app/
+
 JS UPDATES:
 
 - Kada zmaj umre iskljuciti njegov voice. (URADJENO)
