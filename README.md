@@ -14,4 +14,4 @@ JS UPDATES:
 
 CSS UPDATES:
 
-- Responsive, Boki rekao da hoce.
+- Responsive!
